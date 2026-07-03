@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AIR Recruitment Portal – All India Radio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- LANDING PAGE -->
+<div id="landing-page" class="page active">
+  <nav class="navbar">
+    <div class="nav-brand">
+      <div class="air-logo">
+        <span class="logo-icon"><i class="fas fa-broadcast-tower"></i></span>
+        <div>
+          <span class="brand-name">All India Radio</span>
+          <span class="brand-sub">Prasar Bharati</span>
+        </div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#" onclick="showPage('landing-page')">Home</a>
+      <a href="#" onclick="scrollTo('about-section')">About</a>
+      <a href="#" onclick="scrollTo('jobs-section')">Vacancies</a>
+      <a href="#" onclick="showPage('login-page')">Login</a>
+      <button class="btn-primary" onclick="showPage('login-page')">Apply Now</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-star"></i> Government of India</div>
+      <h1>Shape the Voice of India</h1>
+      <p>Join All India Radio – the largest radio network in the world. Build your career in public broadcasting with purpose and impact.</p>
+      <div class="hero-actions">
+        <button class="btn-primary large" onclick="showPage('login-page')"><i class="fas fa-paper-plane"></i> Start Application</button>
+        <button class="btn-outline large" onclick="scrollTo('jobs-section')"><i class="fas fa-briefcase"></i> View Vacancies</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-count="247">0</span><span>Open Positions</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="12400">0</span><span>Applications This Year</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-count="98">0</span><span>Stations Nationwide</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="radio-tower-anim">
+        <i class="fas fa-broadcast-tower"></i>
+        <div class="signal-ring r1"></div>
+        <div class="signal-ring r2"></div>
+        <div class="signal-ring r3"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-section" class="process-section">
+    <h2>How It Works</h2>
+    <p class="section-sub">A transparent, end-to-end digital recruitment journey</p>
+    <div class="process-steps">
+      <div class="step-card"><div class="step-icon s1"><i class="fas fa-file-alt"></i></div><h3>Apply</h3><p>Submit your application online with required documents</p></div>
+      <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+      <div class="step-card"><div class="step-icon s2"><i class="fas fa-filter"></i></div><h3>Screening</h3><p>Automated eligibility check based on job criteria</p></div>
+      <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+      <div class="step-card"><div class="step-icon s3"><i class="fas fa-laptop-code"></i></div><h3>Assessment</h3><p>Online aptitude and technical evaluation</p></div>
+      <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+      <div class="step-card"><div class="step-icon s4"><i class="fas fa-video"></i></div><h3>Interview</h3><p>Virtual interview with panel review</p></div>
+      <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+      <div class="step-card"><div class="step-icon s5"><i class="fas fa-trophy"></i></div><h3>Selection</h3><p>Final decision with status update on your dashboard</p></div>
+    </div>
+  </section>
+
+  <section id="jobs-section" class="jobs-section">
+    <h2>Current Vacancies</h2>
+    <p class="section-sub">Explore open positions across All India Radio</p>
+    <div class="job-filters">
+      <button class="filter-btn active" onclick="filterJobs(this,'all')">All Roles</button>
+      <button class="filter-btn" onclick="filterJobs(this,'technical')">Technical</button>
+      <button class="filter-btn" onclick="filterJobs(this,'editorial')">Editorial</button>
+      <button class="filter-btn" onclick="filterJobs(this,'administrative')">Administrative</button>
+    </div>
+    <div class="jobs-grid" id="jobs-grid"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <i class="fas fa-broadcast-tower"></i>
+        <span>All India Radio, New Delhi</span>
+        <span class="footer-sub">Ministry of Information & Broadcasting, Govt. of India</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">RTI</a><a href="#">Privacy Policy</a><a href="#">Help Desk</a><a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- LOGIN PAGE -->
+<div id="login-page" class="page">
+  <div class="login-wrapper">
+    <div class="login-left">
+      <div class="login-brand">
+        <i class="fas fa-broadcast-tower"></i>
+        <h2>All India Radio</h2>
+        <p>Recruitment Management Portal</p>
+      </div>
+      <div class="login-visual">
+        <div class="radio-tower-sm"><i class="fas fa-broadcast-tower"></i><div class="signal-ring r1"></div><div class="signal-ring r2"></div></div>
+      </div>
+      <blockquote>"Bahujan Hitaya Bahujan Sukhaya" — For the Welfare of Many</blockquote>
+    </div>
+    <div class="login-right">
+      <button class="back-btn" onclick="showPage('landing-page')"><i class="fas fa-arrow-left"></i> Back</button>
+      <h3>Welcome Back</h3>
+      <p class="login-sub">Sign in to your account</p>
+      <div class="role-tabs">
+        <button class="role-tab active" onclick="selectRole(this,'candidate')"><i class="fas fa-user-graduate"></i> Candidate</button>
+        <button class="role-tab" onclick="selectRole(this,'hr')"><i class="fas fa-user-tie"></i> HR</button>
+        <button class="role-tab" onclick="selectRole(this,'interviewer')"><i class="fas fa-user-check"></i> Interviewer</button>
+        <button class="role-tab" onclick="selectRole(this,'admin')"><i class="fas fa-shield-alt"></i> Admin</button>
+      </div>
+      <form class="login-form" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label>Email / User ID</label>
+          <div class="input-icon"><i class="fas fa-envelope"></i><input type="text" placeholder="Enter your email" required /></div>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <div class="input-icon"><i class="fas fa-lock"></i><input type="password" id="pwd-input" placeholder="Enter password" required /><i class="fas fa-eye toggle-pwd" onclick="togglePwd()"></i></div>
+        </div>
+        <div class="form-row">
+          <label class="checkbox-label"><input type="checkbox"/> Remember me</label>
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn-primary full">Sign In <i class="fas fa-sign-in-alt"></i></button>
+      </form>
+      <p class="register-link">New candidate? <a href="#" onclick="showPage('register-page')">Create Account</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- REGISTER PAGE -->
+<div id="register-page" class="page">
+  <div class="login-wrapper">
+    <div class="login-left">
+      <div class="login-brand"><i class="fas fa-broadcast-tower"></i><h2>All India Radio</h2><p>Candidate Registration</p></div>
+      <div class="reg-info">
+        <div class="reg-info-item"><i class="fas fa-check-circle"></i><span>Free to apply</span></div>
+        <div class="reg-info-item"><i class="fas fa-check-circle"></i><span>Track status in real-time</span></div>
+        <div class="reg-info-item"><i class="fas fa-check-circle"></i><span>Get notified at every step</span></div>
+      </div>
+    </div>
+    <div class="login-right">
+      <button class="back-btn" onclick="showPage('login-page')"><i class="fas fa-arrow-left"></i> Back</button>
+      <h3>Create Account</h3>
+      <p class="login-sub">Register as a new candidate</p>
+      <form class="login-form" onsubmit="handleRegister(event)">
+        <div class="form-row-2">
+          <div class="form-group"><label>First Name</label><div class="input-icon"><i class="fas fa-user"></i><input type="text" placeholder="First name" required/></div></div>
+          <div class="form-group"><label>Last Name</label><div class="input-icon"><i class="fas fa-user"></i><input type="text" placeholder="Last name" required/></div></div>
+        </div>
+        <div class="form-group"><label>Email Address</label><div class="input-icon"><i class="fas fa-envelope"></i><input type="email" placeholder="your@email.com" required/></div></div>
+        <div class="form-group"><label>Mobile Number</label><div class="input-icon"><i class="fas fa-phone"></i><input type="tel" placeholder="+91 XXXXX XXXXX" required/></div></div>
+        <div class="form-group"><label>Password</label><div class="input-icon"><i class="fas fa-lock"></i><input type="password" placeholder="Create a strong password" required/></div></div>
+        <div class="form-group"><label>Confirm Password</label><div class="input-icon"><i class="fas fa-lock"></i><input type="password" placeholder="Repeat password" required/></div></div>
+        <button type="submit" class="btn-primary full">Register <i class="fas fa-user-plus"></i></button>
+      </form>
+      <p class="register-link">Already registered? <a href="#" onclick="showPage('login-page')">Login here</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- CANDIDATE DASHBOARD -->
+<div id="candidate-dashboard" class="page">
+  <div class="dashboard-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><i class="fas fa-broadcast-tower"></i><span>AIR Portal</span></div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" onclick="showDashTab('overview',this)"><i class="fas fa-home"></i><span>Overview</span></a>
+        <a href="#" class="nav-item" onclick="showDashTab('my-applications',this)"><i class="fas fa-file-alt"></i><span>My Applications</span><span class="badge">3</span></a>
+        <a href="#" class="nav-item" onclick="showDashTab('browse-jobs',this)"><i class="fas fa-search"></i><span>Browse Jobs</span></a>
+        <a href="#" class="nav-item" onclick="showDashTab('assessments',this)"><i class="fas fa-laptop-code"></i><span>Assessments</span><span class="badge-green">1 Due</span></a>
+        <a href="#" class="nav-item" onclick="showDashTab('interviews',this)"><i class="fas fa-video"></i><span>Interviews</span></a>
+        <a href="#" class="nav-item" onclick="showDashTab('notifications',this)"><i class="fas fa-bell"></i><span>Notifications</span><span class="badge-red">4</span></a>
+        <a href="#" class="nav-item" onclick="showDashTab('profile',this)"><i class="fas fa-user-circle"></i><span>My Profile</span></a>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="#" class="nav-item logout" onclick="showPage('landing-page')"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+      </div>
+    </aside>
+    <main class="dashboard-main">
+      <header class="dash-header">
+        <button class="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <div class="dash-header-title" id="dash-page-title">Overview</div>
+        <div class="dash-header-right">
+          <button class="icon-btn" onclick="showDashTab('notifications',null)"><i class="fas fa-bell"></i><span class="dot-red"></span></button>
+          <div class="user-avatar" onclick="showDashTab('profile',null)">RS</div>
+        </div>
+      </header>
+      <div class="dash-content" id="dash-content"></div>
+    </main>
+  </div>
+</div>
+
+<!-- HR DASHBOARD -->
+<div id="hr-dashboard" class="page">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><i class="fas fa-broadcast-tower"></i><span>HR Portal</span></div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" onclick="showHRTab('hr-overview',this)"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+        <a href="#" class="nav-item" onclick="showHRTab('hr-jobs',this)"><i class="fas fa-briefcase"></i><span>Job Postings</span></a>
+        <a href="#" class="nav-item" onclick="showHRTab('hr-applications',this)"><i class="fas fa-users"></i><span>Applications</span><span class="badge">48</span></a>
+        <a href="#" class="nav-item" onclick="showHRTab('hr-screening',this)"><i class="fas fa-filter"></i><span>Screening</span></a>
+        <a href="#" class="nav-item" onclick="showHRTab('hr-assessments',this)"><i class="fas fa-clipboard-list"></i><span>Assessments</span></a>
+        <a href="#" class="nav-item" onclick="showHRTab('hr-interviews',this)"><i class="fas fa-video"></i><span>Interviews</span></a>
+        <a href="#" class="nav-item" onclick="showHRTab('hr-hiring',this)"><i class="fas fa-trophy"></i><span>Hiring Decisions</span></a>
+        <a href="#" class="nav-item" onclick="showHRTab('hr-reports',this)"><i class="fas fa-chart-bar"></i><span>Reports</span></a>
+      </nav>
+      <div class="sidebar-footer"><a href="#" class="nav-item logout" onclick="showPage('landing-page')"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></div>
+    </aside>
+    <main class="dashboard-main">
+      <header class="dash-header">
+        <button class="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <div class="dash-header-title" id="hr-page-title">HR Dashboard</div>
+        <div class="dash-header-right">
+          <button class="btn-primary small" onclick="showHRTab('hr-jobs',null)"><i class="fas fa-plus"></i> Post Job</button>
+          <div class="user-avatar hr-av">HR</div>
+        </div>
+      </header>
+      <div class="dash-content" id="hr-content"></div>
+    </main>
+  </div>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div id="admin-dashboard" class="page">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><i class="fas fa-broadcast-tower"></i><span>Admin Portal</span></div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" onclick="showAdminTab('admin-overview',this)"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+        <a href="#" class="nav-item" onclick="showAdminTab('admin-users',this)"><i class="fas fa-users-cog"></i><span>User Management</span></a>
+        <a href="#" class="nav-item" onclick="showAdminTab('admin-roles',this)"><i class="fas fa-shield-alt"></i><span>Roles & Permissions</span></a>
+        <a href="#" class="nav-item" onclick="showAdminTab('admin-reports',this)"><i class="fas fa-chart-pie"></i><span>Reports & Analytics</span></a>
+        <a href="#" class="nav-item" onclick="showAdminTab('admin-settings',this)"><i class="fas fa-cog"></i><span>System Settings</span></a>
+        <a href="#" class="nav-item" onclick="showAdminTab('admin-audit',this)"><i class="fas fa-history"></i><span>Audit Logs</span></a>
+      </nav>
+      <div class="sidebar-footer"><a href="#" class="nav-item logout" onclick="showPage('landing-page')"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></div>
+    </aside>
+    <main class="dashboard-main">
+      <header class="dash-header">
+        <button class="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <div class="dash-header-title" id="admin-page-title">Admin Dashboard</div>
+        <div class="dash-header-right"><div class="user-avatar admin-av">AD</div></div>
+      </header>
+      <div class="dash-content" id="admin-content"></div>
+    </main>
+  </div>
+</div>
+
+<!-- INTERVIEWER DASHBOARD -->
+<div id="interviewer-dashboard" class="page">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><i class="fas fa-broadcast-tower"></i><span>Interviewer</span></div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" onclick="showIVTab('iv-overview',this)"><i class="fas fa-home"></i><span>Dashboard</span></a>
+        <a href="#" class="nav-item" onclick="showIVTab('iv-schedule',this)"><i class="fas fa-calendar-alt"></i><span>My Schedule</span><span class="badge">2</span></a>
+        <a href="#" class="nav-item" onclick="showIVTab('iv-candidates',this)"><i class="fas fa-users"></i><span>Candidates</span></a>
+        <a href="#" class="nav-item" onclick="showIVTab('iv-feedback',this)"><i class="fas fa-star"></i><span>Feedback</span></a>
+      </nav>
+      <div class="sidebar-footer"><a href="#" class="nav-item logout" onclick="showPage('landing-page')"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></div>
+    </aside>
+    <main class="dashboard-main">
+      <header class="dash-header">
+        <button class="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <div class="dash-header-title" id="iv-page-title">Interviewer Dashboard</div>
+        <div class="dash-header-right"><div class="user-avatar iv-av">IV</div></div>
+      </header>
+      <div class="dash-content" id="iv-content"></div>
+    </main>
+  </div>
+</div>
+
+<!-- MODALS -->
+<div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+  <div class="modal" onclick="event.stopPropagation()" id="modal-box">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
