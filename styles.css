@@ -391,3 +391,24 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .sidebar span, .sidebar .badge, .sidebar .badge-green, .sidebar .badge-red { display: none; }
   .dash-content { padding: 16px; }
 }
+
+/* ===== LANGUAGE TOGGLE ===== */
+.lang-toggle {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  letter-spacing: 0.3px;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.lang-toggle:hover {
+  background: rgba(255,255,255,0.22);
+  border-color: var(--accent-light);
+  color: var(--accent-light);
+}

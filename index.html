@@ -23,29 +23,30 @@
       </div>
     </div>
     <div class="nav-links">
-      <a href="#" onclick="showPage('landing-page')">Home</a>
-      <a href="#" onclick="scrollTo('about-section')">About</a>
-      <a href="#" onclick="scrollTo('jobs-section')">Vacancies</a>
-      <a href="#" onclick="showPage('login-page')">Login</a>
-      <button class="btn-primary" onclick="showPage('login-page')">Apply Now</button>
+      <a href="#" onclick="showPage('landing-page')" data-i18n="nav_home">Home</a>
+      <a href="#" onclick="scrollTo('about-section')" data-i18n="nav_about">About</a>
+      <a href="#" onclick="scrollTo('jobs-section')" data-i18n="nav_vacancies">Vacancies</a>
+      <a href="#" onclick="showPage('login-page')" data-i18n="nav_login">Login</a>
+      <button class="btn-primary" onclick="showPage('login-page')" data-i18n="nav_apply">Apply Now</button>
+      <button class="lang-toggle" onclick="toggleLanguage()" id="lang-btn" title="Switch Language">🌐 हिंदी</button>
     </div>
   </nav>
 
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge"><i class="fas fa-star"></i> Government of India</div>
-      <h1>Shape the Voice of India</h1>
-      <p>Join All India Radio – the largest radio network in the world. Build your career in public broadcasting with purpose and impact.</p>
+      <div class="hero-badge"><i class="fas fa-star"></i> <span data-i18n="hero_badge">Government of India</span></div>
+      <h1 data-i18n="hero_title">Shape the Voice of India</h1>
+      <p data-i18n="hero_desc">Join All India Radio – the largest radio network in the world. Build your career in public broadcasting with purpose and impact.</p>
       <div class="hero-actions">
-        <button class="btn-primary large" onclick="showPage('login-page')"><i class="fas fa-paper-plane"></i> Start Application</button>
-        <button class="btn-outline large" onclick="scrollTo('jobs-section')"><i class="fas fa-briefcase"></i> View Vacancies</button>
+        <button class="btn-primary large" onclick="showPage('login-page')"><i class="fas fa-paper-plane"></i> <span data-i18n="hero_btn_apply">Start Application</span></button>
+        <button class="btn-outline large" onclick="scrollTo('jobs-section')"><i class="fas fa-briefcase"></i> <span data-i18n="hero_btn_vacancies">View Vacancies</span></button>
       </div>
       <div class="hero-stats">
-        <div class="stat"><span class="stat-num" data-count="247">0</span><span>Open Positions</span></div>
+        <div class="stat"><span class="stat-num" data-count="247">0</span><span data-i18n="stat_positions">Open Positions</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num" data-count="12400">0</span><span>Applications This Year</span></div>
+        <div class="stat"><span class="stat-num" data-count="12400">0</span><span data-i18n="stat_applications">Applications This Year</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num" data-count="98">0</span><span>Stations Nationwide</span></div>
+        <div class="stat"><span class="stat-num" data-count="98">0</span><span data-i18n="stat_stations">Stations Nationwide</span></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -59,29 +60,29 @@
   </section>
 
   <section id="about-section" class="process-section">
-    <h2>How It Works</h2>
-    <p class="section-sub">A transparent, end-to-end digital recruitment journey</p>
+    <h2 data-i18n="process_title">How It Works</h2>
+    <p class="section-sub" data-i18n="process_sub">A transparent, end-to-end digital recruitment journey</p>
     <div class="process-steps">
-      <div class="step-card"><div class="step-icon s1"><i class="fas fa-file-alt"></i></div><h3>Apply</h3><p>Submit your application online with required documents</p></div>
+      <div class="step-card"><div class="step-icon s1"><i class="fas fa-file-alt"></i></div><h3 data-i18n="step1_title">Apply</h3><p data-i18n="step1_desc">Submit your application online with required documents</p></div>
       <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
-      <div class="step-card"><div class="step-icon s2"><i class="fas fa-filter"></i></div><h3>Screening</h3><p>Automated eligibility check based on job criteria</p></div>
+      <div class="step-card"><div class="step-icon s2"><i class="fas fa-filter"></i></div><h3 data-i18n="step2_title">Screening</h3><p data-i18n="step2_desc">Automated eligibility check based on job criteria</p></div>
       <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
-      <div class="step-card"><div class="step-icon s3"><i class="fas fa-laptop-code"></i></div><h3>Assessment</h3><p>Online aptitude and technical evaluation</p></div>
+      <div class="step-card"><div class="step-icon s3"><i class="fas fa-laptop-code"></i></div><h3 data-i18n="step3_title">Assessment</h3><p data-i18n="step3_desc">Online aptitude and technical evaluation</p></div>
       <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
-      <div class="step-card"><div class="step-icon s4"><i class="fas fa-video"></i></div><h3>Interview</h3><p>Virtual interview with panel review</p></div>
+      <div class="step-card"><div class="step-icon s4"><i class="fas fa-video"></i></div><h3 data-i18n="step4_title">Interview</h3><p data-i18n="step4_desc">Virtual interview with panel review</p></div>
       <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
-      <div class="step-card"><div class="step-icon s5"><i class="fas fa-trophy"></i></div><h3>Selection</h3><p>Final decision with status update on your dashboard</p></div>
+      <div class="step-card"><div class="step-icon s5"><i class="fas fa-trophy"></i></div><h3 data-i18n="step5_title">Selection</h3><p data-i18n="step5_desc">Final decision with status update on your dashboard</p></div>
     </div>
   </section>
 
   <section id="jobs-section" class="jobs-section">
-    <h2>Current Vacancies</h2>
-    <p class="section-sub">Explore open positions across All India Radio</p>
+    <h2 data-i18n="jobs_title">Current Vacancies</h2>
+    <p class="section-sub" data-i18n="jobs_sub">Explore open positions across All India Radio</p>
     <div class="job-filters">
-      <button class="filter-btn active" onclick="filterJobs(this,'all')">All Roles</button>
-      <button class="filter-btn" onclick="filterJobs(this,'technical')">Technical</button>
-      <button class="filter-btn" onclick="filterJobs(this,'editorial')">Editorial</button>
-      <button class="filter-btn" onclick="filterJobs(this,'administrative')">Administrative</button>
+      <button class="filter-btn active" onclick="filterJobs(this,'all')" data-i18n="filter_all">All Roles</button>
+      <button class="filter-btn" onclick="filterJobs(this,'technical')" data-i18n="filter_technical">Technical</button>
+      <button class="filter-btn" onclick="filterJobs(this,'editorial')" data-i18n="filter_editorial">Editorial</button>
+      <button class="filter-btn" onclick="filterJobs(this,'administrative')" data-i18n="filter_admin">Administrative</button>
     </div>
     <div class="jobs-grid" id="jobs-grid"></div>
   </section>
@@ -116,8 +117,8 @@
     </div>
     <div class="login-right">
       <button class="back-btn" onclick="showPage('landing-page')"><i class="fas fa-arrow-left"></i> Back</button>
-      <h3>Welcome Back</h3>
-      <p class="login-sub">Sign in to your account</p>
+      <h3 data-i18n="login_welcome">Welcome Back</h3>
+      <p class="login-sub" data-i18n="login_sub">Sign in to your account</p>
       <div class="role-tabs">
         <button class="role-tab active" onclick="selectRole(this,'candidate')"><i class="fas fa-user-graduate"></i> Candidate</button>
         <button class="role-tab" onclick="selectRole(this,'hr')"><i class="fas fa-user-tie"></i> HR</button>
@@ -126,20 +127,20 @@
       </div>
       <form class="login-form" onsubmit="handleLogin(event)">
         <div class="form-group">
-          <label>Email / User ID</label>
-          <div class="input-icon"><i class="fas fa-envelope"></i><input type="text" placeholder="Enter your email" required /></div>
+          <label data-i18n="login_email">Email / User ID</label>
+          <div class="input-icon"><i class="fas fa-envelope"></i><input type="text" placeholder="Enter your email" data-i18n-placeholder="login_email_ph" required /></div>
         </div>
         <div class="form-group">
-          <label>Password</label>
-          <div class="input-icon"><i class="fas fa-lock"></i><input type="password" id="pwd-input" placeholder="Enter password" required /><i class="fas fa-eye toggle-pwd" onclick="togglePwd()"></i></div>
+          <label data-i18n="login_password">Password</label>
+          <div class="input-icon"><i class="fas fa-lock"></i><input type="password" id="pwd-input" placeholder="Enter password" data-i18n-placeholder="login_pwd_ph" required /><i class="fas fa-eye toggle-pwd" onclick="togglePwd()"></i></div>
         </div>
         <div class="form-row">
-          <label class="checkbox-label"><input type="checkbox"/> Remember me</label>
-          <a href="#" class="forgot-link">Forgot Password?</a>
+          <label class="checkbox-label"><input type="checkbox"/> <span data-i18n="login_remember">Remember me</span></label>
+          <a href="#" class="forgot-link" data-i18n="login_forgot">Forgot Password?</a>
         </div>
-        <button type="submit" class="btn-primary full">Sign In <i class="fas fa-sign-in-alt"></i></button>
+        <button type="submit" class="btn-primary full" data-i18n="login_btn">Sign In <i class="fas fa-sign-in-alt"></i></button>
       </form>
-      <p class="register-link">New candidate? <a href="#" onclick="showPage('register-page')">Create Account</a></p>
+      <p class="register-link" data-i18n="login_new_candidate">New candidate? <a href="#" onclick="showPage('register-page')" data-i18n="login_create_account">Create Account</a></p>
     </div>
   </div>
 </div>
@@ -156,9 +157,9 @@
       </div>
     </div>
     <div class="login-right">
-      <button class="back-btn" onclick="showPage('login-page')"><i class="fas fa-arrow-left"></i> Back</button>
-      <h3>Create Account</h3>
-      <p class="login-sub">Register as a new candidate</p>
+      <button class="back-btn" onclick="showPage('login-page')"><i class="fas fa-arrow-left"></i> <span data-i18n="btn_back">Back</span></button>
+      <h3 data-i18n="reg_title">Create Account</h3>
+      <p class="login-sub" data-i18n="reg_sub">Register as a new candidate</p>
       <form class="login-form" onsubmit="handleRegister(event)">
         <div class="form-row-2">
           <div class="form-group"><label>First Name</label><div class="input-icon"><i class="fas fa-user"></i><input type="text" placeholder="First name" required/></div></div>
@@ -168,9 +169,9 @@
         <div class="form-group"><label>Mobile Number</label><div class="input-icon"><i class="fas fa-phone"></i><input type="tel" placeholder="+91 XXXXX XXXXX" required/></div></div>
         <div class="form-group"><label>Password</label><div class="input-icon"><i class="fas fa-lock"></i><input type="password" placeholder="Create a strong password" required/></div></div>
         <div class="form-group"><label>Confirm Password</label><div class="input-icon"><i class="fas fa-lock"></i><input type="password" placeholder="Repeat password" required/></div></div>
-        <button type="submit" class="btn-primary full">Register <i class="fas fa-user-plus"></i></button>
+        <button type="submit" class="btn-primary full" data-i18n="reg_btn">Register <i class="fas fa-user-plus"></i></button>
       </form>
-      <p class="register-link">Already registered? <a href="#" onclick="showPage('login-page')">Login here</a></p>
+      <p class="register-link"><span data-i18n="reg_already">Already registered?</span> <a href="#" onclick="showPage('login-page')" data-i18n="reg_login_link">Login here</a></p>
     </div>
   </div>
 </div>

@@ -927,3 +927,168 @@ document.addEventListener('DOMContentLoaded', () => {
   renderJobs();
   animateCounters();
 });
+
+// ===== LANGUAGE / i18n =====
+let currentLang = 'en';
+
+const translations = {
+  en: {
+    // Navbar
+    nav_home: 'Home',
+    nav_about: 'About',
+    nav_vacancies: 'Vacancies',
+    nav_login: 'Login',
+    nav_apply: 'Apply Now',
+    // Hero
+    hero_badge: 'Government of India',
+    hero_title: 'Shape the Voice of India',
+    hero_desc: 'Join All India Radio – the largest radio network in the world. Build your career in public broadcasting with purpose and impact.',
+    hero_btn_apply: 'Start Application',
+    hero_btn_vacancies: 'View Vacancies',
+    stat_positions: 'Open Positions',
+    stat_applications: 'Applications This Year',
+    stat_stations: 'Stations Nationwide',
+    // Process
+    process_title: 'How It Works',
+    process_sub: 'A transparent, end-to-end digital recruitment journey',
+    step1_title: 'Apply',
+    step1_desc: 'Submit your application online with required documents',
+    step2_title: 'Screening',
+    step2_desc: 'Automated eligibility check based on job criteria',
+    step3_title: 'Assessment',
+    step3_desc: 'Online aptitude and technical evaluation',
+    step4_title: 'Interview',
+    step4_desc: 'Virtual interview with panel review',
+    step5_title: 'Selection',
+    step5_desc: 'Final decision with status update on your dashboard',
+    // Jobs
+    jobs_title: 'Current Vacancies',
+    jobs_sub: 'Explore open positions across All India Radio',
+    filter_all: 'All Roles',
+    filter_technical: 'Technical',
+    filter_editorial: 'Editorial',
+    filter_admin: 'Administrative',
+    // Login
+    login_welcome: 'Welcome Back',
+    login_sub: 'Sign in to your account',
+    login_email: 'Email / User ID',
+    login_email_ph: 'Enter your email',
+    login_password: 'Password',
+    login_pwd_ph: 'Enter password',
+    login_remember: 'Remember me',
+    login_forgot: 'Forgot Password?',
+    login_btn: 'Sign In',
+    login_new_candidate: 'New candidate?',
+    login_create_account: 'Create Account',
+    // Register
+    reg_title: 'Create Account',
+    reg_sub: 'Register as a new candidate',
+    reg_btn: 'Register',
+    reg_already: 'Already registered?',
+    reg_login_link: 'Login here',
+    btn_back: 'Back',
+  },
+  hi: {
+    // Navbar
+    nav_home: 'होम',
+    nav_about: 'हमारे बारे में',
+    nav_vacancies: 'रिक्तियाँ',
+    nav_login: 'लॉगिन',
+    nav_apply: 'आवेदन करें',
+    // Hero
+    hero_badge: 'भारत सरकार',
+    hero_title: 'भारत की आवाज़ को आकार दें',
+    hero_desc: 'ऑल इंडिया रेडियो से जुड़ें – विश्व का सबसे बड़ा रेडियो नेटवर्क। सार्वजनिक प्रसारण में अपना करियर बनाएं।',
+    hero_btn_apply: 'आवेदन शुरू करें',
+    hero_btn_vacancies: 'रिक्तियाँ देखें',
+    stat_positions: 'खुले पद',
+    stat_applications: 'इस वर्ष आवेदन',
+    stat_stations: 'देशभर के स्टेशन',
+    // Process
+    process_title: 'यह कैसे काम करता है',
+    process_sub: 'एक पारदर्शी, पूर्णतः डिजिटल भर्ती प्रक्रिया',
+    step1_title: 'आवेदन करें',
+    step1_desc: 'आवश्यक दस्तावेज़ों के साथ ऑनलाइन आवेदन जमा करें',
+    step2_title: 'स्क्रीनिंग',
+    step2_desc: 'नौकरी मानदंडों के आधार पर स्वचालित पात्रता जाँच',
+    step3_title: 'मूल्यांकन',
+    step3_desc: 'ऑनलाइन अभिरुचि और तकनीकी परीक्षा',
+    step4_title: 'साक्षात्कार',
+    step4_desc: 'पैनल समीक्षा के साथ वर्चुअल साक्षात्कार',
+    step5_title: 'चयन',
+    step5_desc: 'अंतिम निर्णय और डैशबोर्ड पर स्थिति अपडेट',
+    // Jobs
+    jobs_title: 'वर्तमान रिक्तियाँ',
+    jobs_sub: 'ऑल इंडिया रेडियो में खुले पदों का अन्वेषण करें',
+    filter_all: 'सभी पद',
+    filter_technical: 'तकनीकी',
+    filter_editorial: 'संपादकीय',
+    filter_admin: 'प्रशासनिक',
+    // Login
+    login_welcome: 'वापस स्वागत है',
+    login_sub: 'अपने खाते में साइन इन करें',
+    login_email: 'ईमेल / यूज़र आईडी',
+    login_email_ph: 'अपना ईमेल दर्ज करें',
+    login_password: 'पासवर्ड',
+    login_pwd_ph: 'पासवर्ड दर्ज करें',
+    login_remember: 'मुझे याद रखें',
+    login_forgot: 'पासवर्ड भूल गए?',
+    login_btn: 'साइन इन करें',
+    login_new_candidate: 'नए उम्मीदवार?',
+    login_create_account: 'खाता बनाएं',
+    // Register
+    reg_title: 'खाता बनाएं',
+    reg_sub: 'नए उम्मीदवार के रूप में पंजीकरण करें',
+    reg_btn: 'पंजीकरण करें',
+    reg_already: 'पहले से पंजीकृत हैं?',
+    reg_login_link: 'यहाँ लॉगिन करें',
+    btn_back: 'वापस',
+  }
+};
+
+function toggleLanguage() {
+  currentLang = currentLang === 'en' ? 'hi' : 'en';
+  applyLanguage();
+}
+
+function applyLanguage() {
+  const t = translations[currentLang];
+  const isHindi = currentLang === 'hi';
+
+  // Update lang-btn label
+  const btn = document.getElementById('lang-btn');
+  if (btn) btn.textContent = isHindi ? '🌐 English' : '🌐 हिंदी';
+
+  // Update all data-i18n elements (text content)
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      // Preserve child elements (like <a> tags) — only update text nodes
+      if (el.children.length === 0) {
+        el.textContent = t[key];
+      } else {
+        // For elements with mixed content (text + children), update carefully
+        el.childNodes.forEach(node => {
+          if (node.nodeType === 3 /* TEXT_NODE */ && node.textContent.trim()) {
+            // Replace only the main text chunk
+            node.textContent = t[key] + ' ';
+          }
+        });
+      }
+    }
+  });
+
+  // Update placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key] !== undefined) el.placeholder = t[key];
+  });
+
+  // Update page title
+  document.title = isHindi
+    ? 'AIR भर्ती पोर्टल – ऑल इंडिया रेडियो'
+    : 'AIR Recruitment Portal – All India Radio';
+
+  // Re-render jobs to update badge text and button labels
+  renderJobs();
+}
